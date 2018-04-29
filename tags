@@ -1,0 +1,21 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ClassMethods	lib/stateful.rb	/^	module ClassMethods$/;"	m	class:Stateful
+Engine	lib/stateful/engine.rb	/^  class Engine < ::Rails::Engine$/;"	c	class:Stateful
+Event	lib/stateful.rb	/^	class Event$/;"	c	class:Stateful
+Stateful	lib/stateful.rb	/^module Stateful$/;"	m
+Stateful	lib/stateful/engine.rb	/^module Stateful$/;"	m
+Stateful	lib/stateful/version.rb	/^module Stateful$/;"	m
+backward	lib/stateful.rb	/^		def backward(event,opts={})$/;"	f	class:Stateful.Event
+fire_event	lib/stateful.rb	/^		def fire_event(event,record)$/;"	f	class:Stateful.Event
+forward	lib/stateful.rb	/^		def forward(event,opts={})$/;"	f	class:Stateful.Event
+initialize	lib/stateful.rb	/^		def initialize(states,es_table)$/;"	f	class:Stateful.Event
+initialize	lib/stateful.rb	/^	def initialize(*arg)$/;"	f	class:Stateful
+possible_events	lib/stateful.rb	/^	def possible_events$/;"	f	class:Stateful
+stateful	lib/stateful.rb	/^		def stateful(opts = {})$/;"	f	class:Stateful.ClassMethods
+states	lib/stateful.rb	/^		def states$/;"	f	class:Stateful.ClassMethods
+transform	lib/stateful.rb	/^		def transform(states,opts={},&block)$/;"	f	class:Stateful.ClassMethods
