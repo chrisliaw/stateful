@@ -131,7 +131,6 @@ module Stateful
 				event_states_table = self.class.class_variable_get :@@event_states_table
 				event_states_table.keys.each do |k|
 					event_states_table[k].each do |s|
-						p s
 						if s[:transition].keys[0] == @current and !@events.include?(k)
 							if s[:guard] != nil
 								puts "guard result #{s[:guard].call(self)} for #{k}"
