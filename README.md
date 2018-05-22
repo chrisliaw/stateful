@@ -56,6 +56,8 @@ Example to change the status from "active" to "inactive"
 ```ruby
 @model.inactivate!
 ```
+
+In the event that the action is not actually the next possible action, the status remained untouched and false shall be returned.
  
 
 ## Installation
