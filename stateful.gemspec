@@ -5,7 +5,7 @@ require "stateful/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "stateful"
+  s.name        = "stateful-simple"
   s.version     = Stateful::VERSION
   s.authors     = ["Chris Liaw"]
   s.email       = ["chrisliaw@antrapol.com"]
