@@ -1,4 +1,6 @@
-# Stateful
+# Stateful-Simple
+
+It was named stateful unfortunately jake hoffner beats me first. So I've to rename to stateful-simple
 
 Stateful is inspired by event machine....I think...
 
