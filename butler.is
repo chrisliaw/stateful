@@ -1,0 +1,67 @@
+
+
+# steps for release
+# 1. git status & git add . & git commit -m "xxx" && git push --> make sure repository is ready for release
+# 2. git remote add/update/delete ... && git push remote master  --> release to where? external git server? (optional?)
+# 3. setup target environment (server os stuff)
+#		 - install rvm
+#		 - install ruby
+#		 - install & configure nginx
+#		 - install & configure passenger
+#		 - deploy app
+#		 - start service and test
+
+server do
+	name "asdf"
+	host "206.189.150.92"
+
+	ssh do
+		port "28"
+		user "chris"
+		profile "docean"
+	end
+
+	deploy do
+		port "80"
+		app_root "/var/opt/sandy"
+		app_name "jsuny"
+	end
+end
+
+debug "here"
+
+release {
+	version "v0.1"
+	author "chrisliaw@antrapol.com"
+}
+
+# scm preparation
+scm {
+	repo :origin, "/Volumes/Stash/08.Dev/Repos/stateful_gem"
+	repo :remote, "github:chrisliaw/stateful-simple.git"
+
+	commit :release
+	push :origin, :master
+	push :remote, :master
+
+	# release from which branch
+	release :remote, :master
+}
+
+ssh {
+	on "asdf" do
+		exec "ifconfig"
+	#	exec "sudo apt-get install build-essential"
+	end
+
+	on "asdf" do
+		exec "uname -a"
+		exec "sudo apt-get update"
+	#	exec "sudo apt-get install build-essential"
+	end
+
+}
+	
+
+
+
